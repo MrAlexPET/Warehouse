@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Wins{% endblock %}
+
+{% block content %}
+    <div class="male-female">
+        <form action="{% url 'home' %}"><button><span>MALE GROUPS</span></button></form>
+        <form action="{% url 'home' %}"><button><span>FEMALE GROUPS</span></button></form>
+    </div>
+{% endblock %}
