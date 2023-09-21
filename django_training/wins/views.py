@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Artist
 
 
 def wins_main(request):
@@ -6,7 +7,8 @@ def wins_main(request):
 
 
 def wins_male(request):
-    return render(request, 'wins/male.html')
+    artists = Artist.objects.order_by('name')
+    return render(request, 'wins/male.html', {'artists': artists})
 
 
 def wins_female(request):

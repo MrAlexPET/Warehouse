@@ -109,4 +109,53 @@ aside {
     right: 0;
 }
 
+.male-artist {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.male-artist button {
+    border-radius: 0 50px;
+    background: rgba(5, 9, 107, 0.75);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    width: 250px;
+    height: 150x;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.male-artist button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.male-artist button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.male-artist button:hover span {
+    padding-right: 25px;
+}
+
+.male-artist button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
 

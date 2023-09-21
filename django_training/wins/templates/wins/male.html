@@ -3,7 +3,10 @@
 {% block title %}Wins{% endblock %}
 
 {% block content %}
-    <div>
-        MALE GROUPS
+    <div class="male-artist">
+        {% for el in artists %}
+            <form action="{% url 'home' %}"><button><span>{{ el.name }}</span></button></form>
+<!--            <p>{{ el.company }}</p>-->
+        {% endfor %}
     </div>
 {% endblock %}
