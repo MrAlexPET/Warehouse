@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Artist, Album, Wins
+from.models import Artist, Album, Win
 
 
 @admin.register(Artist)
@@ -12,6 +12,6 @@ class AlbumAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Wins)
-class WinsAdmin(admin.ModelAdmin):
+@admin.register(Win)
+class WinAdmin(admin.ModelAdmin):
     pass

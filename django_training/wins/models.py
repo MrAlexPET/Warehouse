@@ -4,6 +4,7 @@ from django.db import models
 class Artist(models.Model):
     name = models.CharField(max_length=50)
     company = models.CharField(max_length=100)
+    gender = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name
@@ -11,6 +12,7 @@ class Artist(models.Model):
     class Meta:
         verbose_name = 'Artist'
         verbose_name_plural = 'Artists'
+        db_table = 'artist'
 
 
 class Album(models.Model):
@@ -25,9 +27,10 @@ class Album(models.Model):
     class Meta:
         verbose_name = 'Album'
         verbose_name_plural = 'Albums'
+        db_table = 'album'
 
 
-class Wins(models.Model):
+class Win(models.Model):
     song = models.ForeignKey(Album, on_delete=models.CASCADE)
     date_of_winning = models.DateField()
     music_show = models.CharField(max_length=50)
@@ -35,3 +38,4 @@ class Wins(models.Model):
     class Meta:
         verbose_name = 'Win'
         verbose_name_plural = 'Wins'
+        db_table = 'win'
