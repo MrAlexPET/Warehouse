@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="male-female">
-        <form action="{% url 'wins_male' %}"><button><span>MALE GROUPS</span></button></form>
-        <form action="{% url 'wins_female' %}"><button><span>FEMALE GROUPS</span></button></form>
+        <form action="{% url 'wins_artists' 'male' %}"><button><span>MALE GROUPS</span></button></form>
+        <form action="{% url 'wins_artists' 'female' %}"><button><span>FEMALE GROUPS</span></button></form>
     </div>
 {% endblock %}

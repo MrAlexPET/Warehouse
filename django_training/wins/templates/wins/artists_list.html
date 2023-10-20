@@ -5,7 +5,7 @@
 {% block content %}
     <div class="male-artist">
         {% for artist in artists %}
-            <form action="{% url 'male_detail' artist.slug %}"><button><span>{{ artist.name }}</span></button></form>
+            <form action="{% url 'artist_detail' artist.gender artist.slug %}"><button><span>{{ artist.name }}</span></button></form>
         {% endfor %}
     </div>
 {% endblock %}
